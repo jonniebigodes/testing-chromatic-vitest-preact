@@ -65,6 +65,10 @@ export default defineConfig({
         plugins: [
           chromaticPlugin({
             disableAutoSnapshot: true,
+            reporter: {
+              enabled: true,
+              verbose: true,
+            },
           }),
         ],
         test: {
@@ -80,13 +84,13 @@ export default defineConfig({
               {
                 browser: "chromium",
               },
-              /* {
+              {
                 browser: "firefox",
               },
 
               {
                 browser: "webkit",
-              }, */
+              },
             ],
           },
         },
